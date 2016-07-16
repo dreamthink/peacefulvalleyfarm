@@ -1,1 +1,1 @@
-dreamthink.github.io/peacefulvalleyfarm
+http://dreamthink.github.io/peacefulvalleyfarm
