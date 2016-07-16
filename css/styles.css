@@ -37,12 +37,21 @@ td {
 	padding: 0 1em;
 }
 
+.go-to-market {
+	margin: 1em auto;
+}
+
 .btn-market {
 	background-color: #F4D03F;
 }
 
 .btn-market:hover {
 	background-color: gold;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
 }
 
 @media (max-width: 800px) {
