@@ -1,0 +1,52 @@
+html { 
+  background: url("../images/farm.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.welcome {
+	width: 60%;
+	background-color: rgba(255,255,255,0.85);
+	font-family: 'Lora', serif;
+	font-size: 1.25em;
+	text-align: center;
+	padding: 2em 0.5em;
+	color: #333;
+	margin: 2em auto;
+	border-radius: 5px;
+}
+
+#greeting {
+	text-transform: uppercase;
+	font-size: 2em;
+}
+
+table {
+	border-spacing: 50px;
+	margin: 0 auto 1em auto;
+}
+
+td {
+	text-align: left;
+	padding: 0 1em;
+}
+
+.btn-market {
+	background-color: #F4D03F;
+}
+
+.btn-market:hover {
+	background-color: gold;
+}
+
+@media (max-width: 800px) {
+	.welcome {
+		width: 100%;
+	}
+}
