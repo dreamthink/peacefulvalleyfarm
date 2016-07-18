@@ -136,7 +136,7 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 		vm.month = month[vm.monthNumber];
 
 // get day number
-		vm.date = vm.d.getDay();
+		vm.date = vm.d.getDate();
 
 // get year number
 		vm.year = vm.d.getFullYear();
