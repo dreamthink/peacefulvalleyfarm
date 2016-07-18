@@ -1,4 +1,4 @@
-angular.module("PeacefulValleyFarmApp", ["ngRoute"])
+angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 	.config(["$routeProvider", function($routeProvider) {
 		$routeProvider.when("/", {
 			templateUrl: "templates/home.html",
@@ -11,6 +11,11 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute"])
 		.when("/market", {
 			templateUrl: "templates/market.html",
 			controller: "MarketController",
+			controllerAs: "vm"
+		})
+		.when("/bb", {
+			templateUrl: "templates/bb.html",
+			controller: "BBController",
 			controllerAs: "vm"
 		})
 		.when("/error", {
@@ -75,7 +80,7 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute"])
 		closingTimes[6] = 1700;
 
 	// set status to open or closed depending on current time and schedule
-	if ((vm.currentTime < openingTimes[vm.dayNumber]) || (vm.currentTime > closingTimes[vm.dayNumber])) {
+	if ((vm.currentTime < openingTimes[vm.dayNumber]) || (vm.currentTime >= closingTimes[vm.dayNumber])) {
 			vm.status = "closed";
 		} else {
 			vm.status = "open";
@@ -84,13 +89,55 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute"])
 	// check date info
 		console.log("current hours: " + vm.currentHours);
 		console.log("current minutes: " + vm.currentMinutes);
-		console.log("current time: " + vm.currentTime);	
-
+		console.log("current time: " + vm.currentTime);
 	})
 
-	.controller("MarketController", function() {
+	.controller("MarketController", ["$scope", function($scope) {
+		var vm = this;
+		vm.d = new Date();
+	// set item names, price, and quantity - only updates subtotal calculations whenever qty1 is updated, not for other fields
+		// $scope.$watch(function() {
+		// 	return vm.qty1;
+		// 	return vm.qty2;
+		// 	return vm.qty3;
+		// }, function(newSubtotal) {
+		// 	console.log(newSubtotal);
+		// 	vm.subtotal1 = vm.qty1 * vm.price1;
+		// 	vm.subtotal2 = vm.qty2 * vm.price2;
+		// 	vm.subtotal3 = vm.qty3 * vm.price3;
+		//  vm.subtotal = vm.subtotal1 + vm.subtotal2 + vm.subtotal3;
+		// });
+			
+		// $scope.qty1 = "qty1";
+		// $scope.qty2 = "qty2";
+		// $scope.qty3 = "qty3";
+		// $scope.price1 = "price1";
+		// $scope.price2 = "price2";
+		// $scope.price3 = "price3";
+
+		$scope.$watchGroup(["vm.qty1", "vm.qty2", "vm.qty3"], function(newQty, oldQty) {
+			vm.itemTotal1 = newQty[0] * vm.price1;
+			vm.itemTotal2 = newQty[1] * vm.price2;
+			vm.itemTotal3 = newQty[2] * vm.price3;
+			vm.subtotal = vm.itemTotal1 + vm.itemTotal2 + vm.itemTotal3;
+			const TAX_RATE = 6 / 100;
+			vm.tax = vm.subtotal * TAX_RATE;	
+			vm.grandTotal = vm.subtotal + vm.tax;
+		});	
+		
+			vm.item1 = "Eggs (one dozen)";
+			vm.price1 = 3.50;
+			vm.qty1 = "";
+
+			vm.item2 = "Apples (per lb.)";
+			vm.price2 = 2.49;
+			vm.qty2 = "";
+
+			vm.item3 = "Peaches (per lb.)";
+			vm.price3 = 2.79;
+			vm.qty3 = "";
 
 
-	});
+	}]);
 
 

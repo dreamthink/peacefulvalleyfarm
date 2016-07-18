@@ -1,15 +1,53 @@
-<p>These are today's offerings. Click to add to your basket.</p>
+<p>These are today's offerings for {{ vm.d }}. Click to add to your basket. Orders received when the farm is closed will be available for pick-up by 1 pm the next day.</p>
 
-<table>
+<table id="market">
 	<thead>
-		<th></th>
-		<th></th>
+		<th>Item</th>
+		<th>Price</th>
+		<th>Quantity</th>
+		<th>Item Total</th>
 	</thead>
 	<tbody>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>{{ vm.item1 }}</td>
+			<td>{{ vm.price1 }}</td>
+			<td><input ng-model="vm.qty1"></td>
+			<td>{{ vm.itemTotal1 | currency }}</td>
 		</tr>
+		<tr>
+			<td>{{ vm.item2 }}</td>
+			<td>{{ vm.price2 | currency }}</td>
+			<td><input ng-model="vm.qty2"></td>
+			<td>{{ vm.itemTotal2 | currency }}</td>
+		</tr>
+		<tr>
+			<td>{{ vm.item3 }}</td>
+			<td>{{ vm.price3 | currency }}</td>
+			<td><input ng-model="vm.qty3"></td>
+			<td>{{ vm.itemTotal3 | currency }}</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>Subtotal</td>
+			<td>{{ vm.subtotal | currency }}</td>
+		</tr>
+		<tr id="tax-row">
+			<td></td>
+			<td></td>
+			<td>6% VA sales tax</td>
+			<td>{{ vm.tax | currency }}</td>
+		</tr>
+		<tr id="grandTotal-row">
+			<td></td>
+			<td></td>
+			<td>Grand Total:</td>
+			<td>{{ vm.grandTotal | currency}}</td>
+		</tr>					
 	</tbody>
 </table>
+
+<a href="#checkout"><button class="btn">Checkout</button></a>
+
+
+<a name="checkout">

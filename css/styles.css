@@ -27,6 +27,7 @@ body {
 	font-size: 2em;
 }
 
+/* hours table */
 table {
 	border-spacing: 50px;
 	margin: 0 auto 1em auto;
@@ -37,21 +38,46 @@ td {
 	padding: 0 1em;
 }
 
+/* market table */
+table #market {
+	border-spacing: 10px;
+	margin: 0 auto 1em auto;
+}
+
+table #market td {
+	text-align: left;
+	padding: 0 1em;
+}
+
 .go-to-market {
 	margin: 1em auto;
 }
 
-.btn-market {
+.btn-market, .btn-bb {
 	background-color: #F4D03F;
 }
 
-.btn-market:hover {
+.btn-market:hover, .btn-bb:hover {
 	background-color: gold;
 }
 
 a:link {
 	text-decoration: none;
 	color: black;
+}
+
+.view.ng-enter {
+	animation: fadein 5s;
+	-moz-animation: fadein 5s;
+	-webkit-animation: fadein 5s;
+}
+
+#tax-row {
+	border-bottom: 1px solid black;
+}
+
+#grandTotal-row {
+	font-weight: bold;
 }
 
 @media (max-width: 800px) {
