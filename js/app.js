@@ -94,27 +94,54 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 
 	.controller("MarketController", ["$scope", function($scope) {
 		var vm = this;
-		vm.d = new Date();
-	// set item names, price, and quantity - only updates subtotal calculations whenever qty1 is updated, not for other fields
-		// $scope.$watch(function() {
-		// 	return vm.qty1;
-		// 	return vm.qty2;
-		// 	return vm.qty3;
-		// }, function(newSubtotal) {
-		// 	console.log(newSubtotal);
-		// 	vm.subtotal1 = vm.qty1 * vm.price1;
-		// 	vm.subtotal2 = vm.qty2 * vm.price2;
-		// 	vm.subtotal3 = vm.qty3 * vm.price3;
-		//  vm.subtotal = vm.subtotal1 + vm.subtotal2 + vm.subtotal3;
-		// });
-			
-		// $scope.qty1 = "qty1";
-		// $scope.qty2 = "qty2";
-		// $scope.qty3 = "qty3";
-		// $scope.price1 = "price1";
-		// $scope.price2 = "price2";
-		// $scope.price3 = "price3";
 
+	// declare new Date object
+		vm.d = new Date();
+
+	// get day of the week number
+		vm.dayOfWeekNumber = vm.d.getDay();
+
+	// set weekday names array
+		var weekday = new Array(7);
+		weekday[0] = "Sunday";
+		weekday[1] = "Monday";
+		weekday[2] = "Tuesday";
+		weekday[3] = "Wednesday";
+		weekday[4] = "Thursday";
+		weekday[5] = "Friday";
+		weekday[6] = "Saturday";
+
+	// get day of the week name
+		vm.dayOfTheWeek = weekday[vm.dayOfWeekNumber];
+
+	// get month number
+		vm.monthNumber = vm.d.getMonth();
+
+	// set month names array
+		var month = new Array(12);
+		month[0] = "January";
+		month[1] = "February";
+		month[2] = "March";
+		month[3] = "April";
+		month[4] = "May";
+		month[5] = "June";
+		month[6] = "July";
+		month[7] = "August";
+		month[8] = "September";
+		month[9] = "October";
+		month[10] = "November";
+		month[11] = "December";
+		
+// get month name
+		vm.month = month[vm.monthNumber];
+
+// get day number
+		vm.date = vm.d.getDay();
+
+// get year number
+		vm.year = vm.d.getFullYear();
+
+// set $watchGroup for changes to multiple variables on market order form	
 		$scope.$watchGroup(["vm.qty1", "vm.qty2", "vm.qty3"], function(newQty, oldQty) {
 			vm.itemTotal1 = newQty[0] * vm.price1;
 			vm.itemTotal2 = newQty[1] * vm.price2;
@@ -136,6 +163,26 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 			vm.item3 = "Peaches (per lb.)";
 			vm.price3 = 2.79;
 			vm.qty3 = "";
+
+// set item names, price, and quantity - only updates subtotal calculations whenever qty1 is updated, not for other fields
+		// $scope.$watch(function() {
+		// 	return vm.qty1;
+		// 	return vm.qty2;
+		// 	return vm.qty3;
+		// }, function(newSubtotal) {
+		// 	console.log(newSubtotal);
+		// 	vm.subtotal1 = vm.qty1 * vm.price1;
+		// 	vm.subtotal2 = vm.qty2 * vm.price2;
+		// 	vm.subtotal3 = vm.qty3 * vm.price3;
+		//  vm.subtotal = vm.subtotal1 + vm.subtotal2 + vm.subtotal3;
+		// });
+			
+		// $scope.qty1 = "qty1";
+		// $scope.qty2 = "qty2";
+		// $scope.qty3 = "qty3";
+		// $scope.price1 = "price1";
+		// $scope.price2 = "price2";
+		// $scope.price3 = "price3";
 
 
 	}]);
