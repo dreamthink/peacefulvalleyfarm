@@ -1,5 +1,5 @@
 <p>These are the market offerings for {{ vm.dayOfTheWeek }}, {{ vm.month }} {{ vm.date }}, {{ vm.year}}.</p>
-<p>Click to add to your basket. Orders received when the farm is closed will be available for pick-up by 1 pm the next day.</p>
+<p>Orders received when the farm is closed will be available for pick-up by 1 pm the next day.</p>
 
 <table id="market">
 	<thead>
@@ -11,7 +11,7 @@
 	<tbody>
 		<tr>
 			<td>{{ vm.item1 }}</td>
-			<td>{{ vm.price1 }}</td>
+			<td>{{ vm.price1 | currency }}</td>
 			<td><input ng-model="vm.qty1"></td>
 			<td>{{ vm.itemTotal1 | currency }}</td>
 		</tr>
@@ -47,6 +47,8 @@
 		</tr>					
 	</tbody>
 </table>
+
+<div class="errors" ng-if="vm.qty1 < 0">your input must be greater than 0</div>
 
 <a href="#checkout"><button class="btn">Checkout</button></a>
 

@@ -67,9 +67,7 @@ a:link {
 }
 
 .view.ng-enter {
-	animation: fadein 5s;
-	-moz-animation: fadein 5s;
-	-webkit-animation: fadein 5s;
+	animation: fadein 1s;
 }
 
 #tax-row {
@@ -84,4 +82,9 @@ a:link {
 	.welcome {
 		width: 100%;
 	}
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
