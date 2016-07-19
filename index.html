@@ -4,27 +4,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Peaceful Valley Farm</title>
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script> -->
+	<script src="jquery/dist/jquery.min.js"></script>
+	<script src="angular/angular.min.js"></script>
 	<script src="angular-animate/angular-animate.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link href='https://fonts.googleapis.com/css?family=EB+Garamond|Lora' rel='stylesheet' type='text/css'>
+	<script src="angular-route/angular-route.min.js"></script>
+<!-- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+	<!-- <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<!-- <link href='https://fonts.googleapis.com/css?family=EB+Garamond|Lora' rel='stylesheet' type='text/css'> -->
+
 </head>
 <body>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="welcome">
 					<span id="greeting">Peaceful Valley Farm</span>
-<!-- 					<ul>
-						<li><a href="#/home">home</a></li>
-						<li><a href="#/market">market</a></li>
-						<li><a href="#/error">error</a></li>
-					</ul> -->
-						<div class="view" ng-view></div>
+					<header id="nav">
+						<ul>
+							<li><a href="#/home">Home</a></li>
+							<li><a href="#/market">Market</a></li>
+							<li><a href="#/bb">Bed & Breakfast</a></li>
+							<li><a href="#/animals">Animals</a></li>
+							<li><a href="#/events">Events</a></li>
+							<li><a href="#/FAQ">FAQ</a></li>
+						</ul>
+					</header>
+					<div class="view" ng-view></div>
 				</div>
 			</div>
 		</div>	

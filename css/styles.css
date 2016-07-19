@@ -53,17 +53,26 @@ table #market td {
 	margin: 1em auto;
 }
 
-.btn-market, .btn-bb {
+.btn-market, .btn-bb, .btn-directions, .btn-checkout, #nav li {
 	background-color: #F4D03F;
 }
 
-.btn-market:hover, .btn-bb:hover {
+.btn-market:hover, .btn-bb:hover, .btn-directions:hover, .btn-checkout:hover, #nav li:hover {
 	background-color: gold;
 }
 
 a:link {
 	text-decoration: none;
 	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+.view {
+	padding: 0 1em;
 }
 
 .view.ng-enter {
@@ -76,6 +85,20 @@ a:link {
 
 #grandTotal-row {
 	font-weight: bold;
+}
+
+#nav ul li {
+	display: inline-block;
+	padding: 0.5em 1em;
+}
+
+#breakfast {
+	display: block;
+	text-align: left;
+}
+
+#yoga {
+	text-align: left;
 }
 
 @media (max-width: 800px) {

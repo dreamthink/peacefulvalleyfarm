@@ -18,6 +18,31 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 			controller: "BBController",
 			controllerAs: "vm"
 		})
+		.when("/directions", {
+			templateUrl: "templates/directions.html",
+			controller: "DirectionsController",
+			controllerAs: "vm"
+		})
+		.when("/checkout", {
+			templateUrl: "templates/checkout.html",
+			controller: "CheckoutController",
+			controllerAs: "vm"
+		})
+		.when("/animals", {
+			templateUrl: "templates/animals.html",
+			controller: "AnimalsController",
+			controllerAs: "vm"
+		})
+		.when("/events", {
+			templateUrl: "templates/events.html",
+			controller: "EventsController",
+			controllerAs: "vm"
+		})
+		.when("/FAQ", {
+			templateUrl: "templates/faq.html",
+			controller: "FAQController",
+			controllerAs: "vm"
+		})
 		.when("/error", {
 			templateUrl: "templates/error.html",
 			controller: "ErrorController",
@@ -164,6 +189,9 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 			vm.price3 = 2.79;
 			vm.qty3 = "";
 
+	// create checkout function
+
+
 // set item names, price, and quantity - only updates subtotal calculations whenever qty1 is updated, not for other fields
 		// $scope.$watch(function() {
 		// 	return vm.qty1;
@@ -185,6 +213,11 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 		// $scope.price3 = "price3";
 
 
-	}]);
+	}])
 
+	.controller("CheckoutController", function() {
+		vm.getGrandTotal = function() {
+
+		};
+	});
 
