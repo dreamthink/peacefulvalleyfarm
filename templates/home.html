@@ -46,7 +46,7 @@
 <!-- <a href="#/directions"><button class="btn btn-directions">Get directions</button></a> -->
 
 <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-	<ui-gmap-marker coords="{latitude: 38.687132, longitude: -78.148775}" options="marker.options" events="marker.events" idkey="1">
+	<ui-gmap-marker coords="map.center" options="marker.animation" events="marker.events" idkey="1" click="marker.markerClick()">
   </ui-gmap-marker>
 </ui-gmap-google-map>
 

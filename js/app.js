@@ -1,3 +1,5 @@
+
+
 angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-maps"])
 	.config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
@@ -129,10 +131,24 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-m
 		 uiGmapGoogleMapApi.then(function(maps) {
 			
     });
-	$scope.map = { 
-		center:{ latitude: 38.687132, longitude: -78.148775 },
-		zoom: 8
-	};
+
+		$scope.map = { 
+			center:{ latitude: 38.687132, longitude: -78.148775 },
+			zoom: 8
+		};
+
+		$scope.marker = {
+			markerClick: function() {
+				alert("marker clicked! YEAH WOOHOO");
+			}
+		};
+
+     // var marker = new google.maps.Marker({
+     //      map: map,
+     //      draggable: true,
+     //      animation: google.maps.Animation.DROP,
+     //      position: {lat: 59.327, lng: 18.067}
+     //    });
 
 	})
 
