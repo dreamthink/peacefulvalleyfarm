@@ -101,6 +101,10 @@ a:visited {
 	text-align: left;
 }
 
+.angular-google-map-container {
+	height: 400px;
+}
+
 @media (max-width: 800px) {
 	.welcome {
 		width: 100%;

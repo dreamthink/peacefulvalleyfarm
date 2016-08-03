@@ -1,4 +1,13 @@
-angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
+angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-maps"])
+	.config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+        //    key: 'your api key',
+        v: '3.20', //defaults to latest 3.X anyhow
+        libraries: 'weather,geometry,visualization',
+        key: "AIzaSyA4vYpwMs2FpF4uVVvwprMKoKF6OzzRz6I"
+    });
+	})
+
 	.config(["$routeProvider", function($routeProvider) {
 		$routeProvider.when("/", {
 			templateUrl: "templates/home.html",
@@ -53,7 +62,7 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 		});
 	}])
 
-	.controller("HomeController", function() {
+	.controller("HomeController", function($scope, uiGmapGoogleMapApi) {
 		var vm = this;
 
 	// return the name of the weekday
@@ -115,6 +124,13 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 		console.log("current hours: " + vm.currentHours);
 		console.log("current minutes: " + vm.currentMinutes);
 		console.log("current time: " + vm.currentTime);
+
+	
+		 uiGmapGoogleMapApi.then(function(maps) {
+			
+    });
+	$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+
 	})
 
 	.controller("MarketController", ["$scope", function($scope) {
@@ -189,6 +205,7 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 			vm.price3 = 2.79;
 			vm.qty3 = "";
 
+
 	// create checkout function
 
 
@@ -220,4 +237,3 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate"])
 
 		};
 	});
-
