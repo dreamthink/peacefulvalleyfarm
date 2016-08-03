@@ -129,7 +129,10 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-m
 		 uiGmapGoogleMapApi.then(function(maps) {
 			
     });
-	$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+	$scope.map = { 
+		center:{ latitude: 38.687132, longitude: -78.148775 },
+		zoom: 8
+	};
 
 	})
 
