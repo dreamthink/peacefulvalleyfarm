@@ -53,6 +53,7 @@ table #market td {
 	margin: 1em auto;
 }
 
+
 .btn-market, .btn-bb, .btn-directions, .btn-checkout, #nav li {
 	background-color: #F4D03F;
 }
@@ -87,6 +88,10 @@ a:visited {
 	font-weight: bold;
 }
 
+#nav ul {
+	display: flex;
+}
+
 #nav ul li {
 	display: inline-block;
 	padding: 0.5em 1em;
@@ -102,9 +107,41 @@ a:visited {
 }
 
 .angular-google-map-container {
-	height: 400px;
+	height: 300px;
+	width: 300px;
+	margin: 0 auto;
 }
 
+#map-wrapper {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#market-intro {
+	text-align: left;
+	margin-left: 2.5em;
+	/*border: 1px solid black;*/
+}
+
+/* ANIMALS page*/
+.animals-text {
+	text-align: left;
+}
+
+.animal-img {
+	width: 20em;
+}
+
+#chicken-market:hover {
+	text-decoration: underline;
+}
+
+/* Footer */
+#footer:hover {
+	text-decoration: underline;
+}
+
+/* RESPONSIVE media queries*/
 @media (max-width: 800px) {
 	.welcome {
 		width: 100%;

@@ -44,10 +44,9 @@
 </table>
 
 <!-- <a href="#/directions"><button class="btn btn-directions">Get directions</button></a> -->
-
-<ui-gmap-google-map center='map.center' zoom='map.zoom'>
-	<ui-gmap-marker coords="map.center" options="marker.animation" events="marker.events" idkey="1" click="marker.markerClick()">
-  </ui-gmap-marker>
-</ui-gmap-google-map>
-
-
+<div id="map-wrapper">
+	<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+		<ui-gmap-marker coords="map.center" options="marker.animation" events="marker.events" idkey="1" click="marker.markerClick()">
+  	</ui-gmap-marker>
+	</ui-gmap-google-map>
+</div>

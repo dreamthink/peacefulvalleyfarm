@@ -202,18 +202,20 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-m
 		vm.year = vm.d.getFullYear();
 
 // set $watchGroup for changes to multiple variables on market order form	
-		$scope.$watchGroup(["vm.qty1", "vm.qty2", "vm.qty3"], function(newQty, oldQty) {
+		$scope.$watchGroup(["vm.qty1", "vm.qty2", "vm.qty3", "vm.qty4", "vm.qty5"], function(newQty, oldQty) {
 			vm.itemTotal1 = newQty[0] * vm.price1;
 			vm.itemTotal2 = newQty[1] * vm.price2;
 			vm.itemTotal3 = newQty[2] * vm.price3;
-			vm.subtotal = vm.itemTotal1 + vm.itemTotal2 + vm.itemTotal3;
+			vm.itemTotal4 = newQty[3] * vm.price4;
+			vm.itemTotal5 = newQty[4] * vm.price5;
+			vm.subtotal = vm.itemTotal1 + vm.itemTotal2 + vm.itemTotal3 + vm.itemTotal4 + vm.itemTotal5;
 			const TAX_RATE = 6 / 100;
 			vm.tax = vm.subtotal * TAX_RATE;	
 			vm.grandTotal = vm.subtotal + vm.tax;
 		});	
 		
 			vm.item1 = "Eggs (one dozen)";
-			vm.price1 = 3.50;
+			vm.price1 = 3.00;
 			vm.qty1 = "";
 
 			vm.item2 = "Apples (per lb.)";
@@ -224,7 +226,13 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-m
 			vm.price3 = 2.79;
 			vm.qty3 = "";
 
+			vm.item4 = "Zucchini (per lb.)";
+			vm.price4 = 2.89;
+			vm.qty4 = "";
 
+			vm.item5 = "Tomatoes (per lb.)";
+			vm.price5 = "2.19";
+			vm.qty5 = "";
 	// create checkout function
 
 

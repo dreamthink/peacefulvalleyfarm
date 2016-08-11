@@ -1,5 +1,7 @@
-<p>These are the market offerings for {{ vm.dayOfTheWeek }}, {{ vm.month }} {{ vm.date }}, {{ vm.year}}.</p>
-<p>Orders received when the farm is closed will be available for pick-up by 1 pm the next day.</p>
+<div id="market-intro">
+	<p>These are the market offerings for <strong>{{ vm.dayOfTheWeek }}, {{ vm.month }} {{ vm.date }}, {{ vm.year}}</strong>.</p>
+	<p>Orders received when the farm is closed will be available for pick-up by 1 pm the next day.</p>
+</div>
 
 <table id="market">
 	<thead>
@@ -27,6 +29,18 @@
 			<td><input ng-model="vm.qty3"></td>
 			<td>{{ vm.itemTotal3 | currency }}</td>
 		</tr>
+		<tr>
+			<td>{{ vm.item4 }}</td>
+			<td>{{ vm.price4 | currency }}</td>
+			<td><input ng-model="vm.qty4"></td>
+			<td>{{ vm.itemTotal4 | currency }}</td>
+		</tr>
+		<tr>
+			<td>{{ vm.item5 }}</td>
+			<td>{{ vm.price5 | currency }}</td>
+			<td><input ng-model="vm.qty5"></td>
+			<td>{{ vm.itemTotal5 | currency }}</td>
+		</tr>		
 		<tr>
 			<td></td>
 			<td></td>
