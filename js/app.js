@@ -236,27 +236,6 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-m
 	// create checkout function
 
 
-// set item names, price, and quantity - only updates subtotal calculations whenever qty1 is updated, not for other fields
-		// $scope.$watch(function() {
-		// 	return vm.qty1;
-		// 	return vm.qty2;
-		// 	return vm.qty3;
-		// }, function(newSubtotal) {
-		// 	console.log(newSubtotal);
-		// 	vm.subtotal1 = vm.qty1 * vm.price1;
-		// 	vm.subtotal2 = vm.qty2 * vm.price2;
-		// 	vm.subtotal3 = vm.qty3 * vm.price3;
-		//  vm.subtotal = vm.subtotal1 + vm.subtotal2 + vm.subtotal3;
-		// });
-			
-		// $scope.qty1 = "qty1";
-		// $scope.qty2 = "qty2";
-		// $scope.qty3 = "qty3";
-		// $scope.price1 = "price1";
-		// $scope.price2 = "price2";
-		// $scope.price3 = "price3";
-
-
 	}])
 
 	.controller("CheckoutController", function() {

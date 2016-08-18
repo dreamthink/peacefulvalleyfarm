@@ -80,6 +80,11 @@ a:visited {
 	animation: fadein 1s;
 }
 
+/* MARKET page*/
+.item-img {
+	width: 20em;
+}
+
 #tax-row {
 	border-bottom: 1px solid black;
 }
@@ -142,7 +147,7 @@ a:visited {
 }
 
 /* RESPONSIVE media queries*/
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 	.welcome {
 		width: 100%;
 	}

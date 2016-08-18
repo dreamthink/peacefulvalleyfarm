@@ -10,4 +10,4 @@ I wrote extensive JavaScript code to properly display "open" or "closed" accordi
 </p>
 
 <p><strong>FRAMEWORKS USED:</strong><br>
-HTML, CSS, JavaScript, jQuery, AngularJS, ngRoute, ngAnimate, Bootstrap</p>
+HTML, CSS, JavaScript, jQuery, AngularJS, Bootstrap</p>
