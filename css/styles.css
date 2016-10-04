@@ -94,7 +94,7 @@ a:visited {
 }
 
 #nav ul {
-	display: flex;
+	display: center;
 }
 
 #nav ul li {
