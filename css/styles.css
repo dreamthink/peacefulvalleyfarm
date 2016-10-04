@@ -137,6 +137,11 @@ a:visited {
 	width: 20em;
 }
 
+#animals-list li {
+	text-decoration: none;
+	list-style-type: none;
+}
+
 #chicken-market:hover {
 	text-decoration: underline;
 }

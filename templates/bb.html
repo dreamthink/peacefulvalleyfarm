@@ -1,8 +1,8 @@
 <p>Experience farm life at our bed & breakfast. We serve lunch and dinner, too. Guests are welcome to help with farm duties or are free to explore the hiking trails at their own pace.</p>
 <p>Select your check-in date:</p>
-
+<input type="date" name="check-in">
 <p>Select your check-out date:</p>
-
+<input type="date" name="check-out">
 
 <p id="breakfast">Breakfast menu (included with room rate):</p>
 	<ul id="breakfast">
@@ -13,3 +13,5 @@
 		<li>Fresh, organic berries</li>
 		<li>Yogurt</li>
 	</ul>
+
+<button class="btn btn-checkout" ng-click="vm.bbconfirm()">Checkout</button>

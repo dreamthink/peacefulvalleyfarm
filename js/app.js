@@ -1,5 +1,4 @@
 
-
 angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-maps"])
 	.config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
@@ -233,13 +232,23 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-m
 			vm.item5 = "Tomatoes (per lb.)";
 			vm.price5 = "2.19";
 			vm.qty5 = "";
+
 	// create checkout function
 
 
 	}])
 
 	.controller("CheckoutController", function() {
+		var vm = this;
 		vm.getGrandTotal = function() {
 
 		};
-	});
+	})
+
+
+	.controller("BBController",  ["$scope", function($scope) {
+		var vm = this;
+		vm.bbconfirm = function() {
+			alert("request submitted");
+		};
+	}]);
