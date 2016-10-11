@@ -23,36 +23,36 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-m
 			controller: "MarketController",
 			controllerAs: "vm"
 		})
-		.when("/bb", {
-			templateUrl: "templates/bb.html",
-			controller: "BBController",
-			controllerAs: "vm"
-		})
-		.when("/directions", {
-			templateUrl: "templates/directions.html",
-			controller: "DirectionsController",
-			controllerAs: "vm"
-		})
-		.when("/checkout", {
-			templateUrl: "templates/checkout.html",
-			controller: "CheckoutController",
-			controllerAs: "vm"
-		})
+		// .when("/bb", {
+		// 	templateUrl: "templates/bb.html",
+		// 	controller: "BBController",
+		// 	controllerAs: "vm"
+		// })
+		// .when("/directions", {
+		// 	templateUrl: "templates/directions.html",
+		// 	controller: "DirectionsController",
+		// 	controllerAs: "vm"
+		// })
+		// .when("/checkout", {
+		// 	templateUrl: "templates/checkout.html",
+		// 	controller: "CheckoutController",
+		// 	controllerAs: "vm"
+		// })
 		.when("/animals", {
 			templateUrl: "templates/animals.html",
 			controller: "AnimalsController",
 			controllerAs: "vm"
 		})
-		.when("/events", {
-			templateUrl: "templates/events.html",
-			controller: "EventsController",
-			controllerAs: "vm"
-		})
-		.when("/FAQ", {
-			templateUrl: "templates/faq.html",
-			controller: "FAQController",
-			controllerAs: "vm"
-		})
+		// .when("/events", {
+		// 	templateUrl: "templates/events.html",
+		// 	controller: "EventsController",
+		// 	controllerAs: "vm"
+		// })
+		// .when("/FAQ", {
+		// 	templateUrl: "templates/faq.html",
+		// 	controller: "FAQController",
+		// 	controllerAs: "vm"
+		// })
 		.when("/error", {
 			templateUrl: "templates/error.html",
 			controller: "ErrorController",
@@ -136,11 +136,11 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-m
 			zoom: 8
 		};
 
-		$scope.marker = {
-			markerClick: function() {
-				alert("marker clicked! YEAH WOOHOO");
-			}
-		};
+		// $scope.marker = {
+		// 	markerClick: function() {
+		// 		alert("marker clicked! YEAH WOOHOO");
+		// 	}
+		// };
 
      // var marker = new google.maps.Marker({
      //      map: map,
@@ -234,21 +234,23 @@ angular.module("PeacefulValleyFarmApp", ["ngRoute", "ngAnimate", "uiGmapgoogle-m
 			vm.qty5 = "";
 
 	// create checkout function
+			vm.checkout = function() {
+				alert("Thank you for shopping with us!");
+			};
 
-
-	}])
-
-	.controller("CheckoutController", function() {
-		var vm = this;
-		vm.getGrandTotal = function() {
-
-		};
-	})
-
-
-	.controller("BBController",  ["$scope", function($scope) {
-		var vm = this;
-		vm.bbconfirm = function() {
-			alert("request submitted");
-		};
 	}]);
+
+	// .controller("CheckoutController", function() {
+	// 	var vm = this;
+	// 	vm.getGrandTotal = function() {
+
+	// 	};
+	// });
+
+
+	// .controller("BBController",  ["$scope", function($scope) {
+	// 	var vm = this;
+	// 	vm.bbconfirm = function() {
+	// 		alert("request submitted");
+	// 	};
+	// }]);
